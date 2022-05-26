@@ -46,8 +46,8 @@ function filtrarPorNome(){
     
     const filtroPorNome = produtos.filter((item) => {
         const texto = input.value 
-        const textoTratado = texto[0].toUpperCase() + texto.substring(1)
-        const produto = item.nome
+        const textoTratado = texto.toLowerCase()
+        const produto = item.nome.toLowerCase()
         if (textoTratado == produto) {
             return produto
         }
