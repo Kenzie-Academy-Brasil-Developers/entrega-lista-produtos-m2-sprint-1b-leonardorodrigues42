@@ -1,6 +1,6 @@
 body {
     font-family: Verdana, Geneva, Tahoma, sans-serif;
-    background-color: rgb(245, 245, 245);
+    background-color: rgb(250, 250, 250);
 }
 
 /* CABEÇALHO */
@@ -14,11 +14,10 @@ header {
     background-color: #fff;
     height: 55px;
     box-shadow:0px 4px 40px -20px rgba(0, 0, 0, 0.25);
-    ;
 }
 
 .filtersContainer {
-    width: 1000px;
+    width: 80%;
     margin: 0 auto;
     display: flex;
     justify-content: space-between;
@@ -34,6 +33,8 @@ header {
     cursor: pointer;
     display: block;
     font-size: 0.9rem;
+    background-color: rgba(18, 184, 134, 0.05);
+    color: rgba(18, 184, 134, 1);
 }
 
 .estiloGeralBotoes--mostrarTodos {
@@ -67,57 +68,165 @@ header {
 
 
 .containerListaProdutos {
+    display: flex;
     width: 100%;
-    max-width: 1000px;
+    max-width: 80%;
     margin: 0 auto;
+    justify-content: space-between;
 }
 
-.containerListaProdutos ul {
+.containerListaProdutos__ul {
     list-style: none;
     text-align: center;
     display: flex;
-    justify-content: center;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    margin-right: 40px;
 }
 
-.containerListaProdutos ul li {
+.containerListaProdutos__ul li {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items:flex-start;
     color: black;
     font-weight: bold;
-    padding: 20px;
+    padding: 5px;
     margin: 10px;
-    border-radius: 5px;
-    transition: ease-in-out .1s;
-    width: 20%;
+    border-radius: 1px;
+    transition: ease-in-out .2s;
+    max-width: 190px;
 }
 
-.containerListaProdutos ul li:hover {
+.containerListaProdutos__ul li:hover {
     box-shadow: 3px 3px 13px 1px rgb(146 146 146);
 }
 
-.containerListaProdutos ul li img {
+.containerListaProdutos__ul li img {
     width: 100%;
-    max-width: 80px;
+    border-radius: 7px;
 }
 
-.containerListaProdutos ul li h3 {
-    font-size: 1.5rem;
+.containerListaProdutos__ul li h3 {
+    font-size: 1rem;
+    margin: 5px 0;
 }
 
-.containerListaProdutos ul li p {
-    font-size: 1.5rem;
-}
-.containerListaProdutos ul li span {
+.containerListaProdutos__ul li span {
     font-size: 0.8rem;
     font-weight: 500;
-    margin-top: 10px;
-    display: inline-block;
+    color: rgba(134, 142, 150, 1);
+
 }
 
+.containerListaProdutos__div {
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.componentes {
+    text-align: start;
+    margin: 5px 0;
+}
+
+.containerListaProdutos_ul li p {
+    font-size: 0.8rem;
+}
+
+.carrinho {
+    width: 100%;
+    max-width: 290px;
+    flex-direction: column;
+}
+
+.carrinho .title {
+    display: flex;
+    color: #fff;
+    background-color: rgba(18, 184, 134, 1);
+    height: 40px;
+    margin-top: 15px;
+    border-radius: 10px 10px 0 0;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+.carrinho ul {
+    background: rgb(242, 243, 244);
+    height: 270px;
+    width: 100%;
+    /* border-radius: 0 0 10px 10px; */
+    overflow: auto;
+}
+
+.carrinho ul::-webkit-scrollbar{
+    width: 5px;
+	background-color: #f0f0f0;
+}
+
+.carrinho ul::-webkit-scrollbar-track
+{
+	background-color: #d6d6d6;
+}
+
+.carrinho ul::-webkit-scrollbar-thumb
+{
+	border-radius: 5px;
+	background-color: #7a7a7a;
+}
+
+
+
+.cardCarrinho {
+    display: flex;
+    padding-top: 10px;
+    height: 70px;
+}
+
+.imgCarrinho {
+    /* width: 80px; */
+    border-radius: 5px;
+}
+
+.infoCarrinho {
+    display: flex;
+    flex-direction: column;
+    text-align: start;
+    width: 100%;
+    max-width: 120px;
+    margin-left: 10px;
+    justify-content: space-between;
+}
+
+.infoCarrinho h3 {
+    font-weight: bold;
+}
+
+.infoCarrinho span {
+    font-size: 0.8rem;
+    font-weight: 500;
+    color: rgba(134, 142, 150, 1);
+}
+
+.buttonRemove {
+    width: 11px;
+    height: 13px;
+    margin-right: 5px;
+    margin-left: auto;
+}
+
+
 /* PREÇO TOTAL */
+.containerPrecoTotal img {
+    padding-right: 10px;
+}
 .containerPrecoTotal{
     display: flex;
-    margin: 0 auto;
     background: #fff;
-    width: 1000px;
+    width: 100%;
     height: 40px;
     text-align: center;
     align-items: center;
@@ -143,7 +252,3 @@ header {
     background-color: rgb(50, 50, 50);
     border-radius: 5px;
 } 
-
-.containerPrecoTotal img {
-    padding-right: 10px;
-}

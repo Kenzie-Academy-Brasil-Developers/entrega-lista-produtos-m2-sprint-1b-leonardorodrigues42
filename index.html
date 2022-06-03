@@ -27,28 +27,22 @@
         </div>
     </div>
     
-    <div class="containerPrecoTotal">
-        <p><img src="src/img/alert-circlecircle.svg">Valor total dos produtos da sessão selecionada </p>
-        <span id="precoTotal">00.00</span>
-    </div>
     <main>
         <div class="containerListaProdutos" id="listProdutos">
-            <ul>
-            <!-- Utilize esse item html como template para a construção da lista de produtos -->
-
-            <!-- Você pode remover esses comentários depois que fizer a construção pelo DOM -->
-
-            <!--
-                <li>
-                    <img src="./src/img/maça.png" alt="Imagem maçã">
-                    <h3>Maçã</h3>
-                    <p>R$02.00</p>
-                    <span>Seção - Hortifruti</span>
-                </li>
-            -->
+            <ul class="containerListaProdutos__ul">
+            
             </ul>
+            <div class="carrinho">
+                <div class="title"> <p>Carrinho</p> </div>
+                <ul>
+                </ul>
+                <div class="containerPrecoTotal">
+                    <p><img src="src/img/alert-circlecircle.svg">Valor total dos produtos selecionados </p>
+                    <span id="precoTotal">R$ 00.00</span>
+                </div>
+            </div>
         </div>
-
+        
     </main>
 
     <script src="src/js/dataProdutos.js"></script>
